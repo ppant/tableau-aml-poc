@@ -1,0 +1,17 @@
+$schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
+type: pipeline
+experiment_name: tableau_aml_poc
+
+inputs:
+  input_data:
+    type: uri_file
+    path: azureml://datastores/workspaceblobstore/paths/placeholder/input.csv
+
+jobs:
+  preview_step:
+    type: command
+    code: ./aml
+    command: >-
+      python preview.py --input_data ${{parent.inputs.input_data}}
+    environment: azureml://registries/azureml/environments/sklearn-1.5/labels/latest
+    compute: azureml:cpu-cluster
