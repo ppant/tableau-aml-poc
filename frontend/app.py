@@ -6,7 +6,10 @@ st.set_page_config(page_title="Tableau + AML POC", layout="wide")
 
 st.title("Tableau Dashboard + AML Pipeline Trigger")
 
-TABLEAU_EMBED_URL = os.getenv("TABLEAU_EMBED_URL", "https://public.tableau.com/views/RegionalSampleWorkbook/Stocks")
+TABLEAU_EMBED_URL = os.getenv(
+    "TABLEAU_EMBED_URL",
+    "https://public.tableau.com/views/RegionalSampleWorkbook/College?:showVizHome=no&:embed=yes",
+)
 BACKEND_API_URL = os.getenv("BACKEND_API_URL", "http://localhost:8000")
 
 st.subheader("Dashboard")

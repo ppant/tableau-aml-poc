@@ -93,6 +93,7 @@ For production-style auth (recommended over secrets):
 
 ## 7. Tableau Embed
 
-Set `TABLEAU_EMBED_URL` to your dashboard URL.
+Set `TABLEAU_EMBED_URL` to your dashboard URL. For Tableau Public, prefer embed-style URLs, for example:
+`https://public.tableau.com/views/RegionalSampleWorkbook/College?:showVizHome=no&:embed=yes`
 
 If dashboard is private, use Tableau embedding auth strategy separately; this POC assumes direct iframe-accessible URL.
