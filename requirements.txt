@@ -1,0 +1,7 @@
+streamlit==1.46.1
+flask==3.1.2
+requests==2.32.5
+azure-identity==1.23.1
+azure-storage-blob==12.26.0
+azure-ai-ml==1.29.0
+gunicorn==23.0.0
